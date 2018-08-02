@@ -26,7 +26,7 @@ def scrape_quoted_page(quoted_page_path, item_id)
     html = open(quoted_page_path)
     Nokogiri::HTML(html)
   rescue OpenURI::HTTPError => e
-    p ("path = " + quoted_page_path + " item_id = " + item_id.to_s) if e.message == '404 Not Found'
+    p ("path = " + quoted_page_path + " |  item_id = " + item_id.to_s) if e.message == "404 Not Found"
   end
 end
 
